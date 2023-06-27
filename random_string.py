@@ -10,14 +10,16 @@
 # task.upload_artifact('dataset', artifact_object=local_iris_pkl)
 
 from clearml import Task
+task = Task.init(project_name="pipeline examples", task_name="random string and concat")
+task.execute_remotely()
+task.set_repo(repo='https://github.com/littlepae/pipeline_test.git')
 
 import random
 import string
 import time
 from local_module import test_print
+from local_folder import function_in_folder
 
-task = Task.init(project_name="pipeline examples", task_name="random string and concat")
-# task.execute_remotely()
 
 
 args = {
@@ -35,6 +37,7 @@ print("Random char : "+random_char)
 string_list = args['string_list']+random_char
 
 test_print()
+function_in_folder()
 
 # print("String from this task : "+string_list)
 
