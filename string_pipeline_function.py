@@ -67,6 +67,7 @@ pipe.add_function_step(
     function_kwargs=dict(string_list='${pipeline.start_list_of_sting}'),
     function_return=['string_list'],
     cache_executed_step=True,
+    repo='https://github.com/littlepae/pipeline_test.git',
 )
 
 pipe.add_function_step(
@@ -75,6 +76,7 @@ pipe.add_function_step(
     function_kwargs=dict(string_list='${stage_1.string_list}'),
     function_return=['string_list'],
     cache_executed_step=True,
+    repo='https://github.com/littlepae/pipeline_test.git',
 )
 
 pipe.add_function_step(
@@ -83,6 +85,7 @@ pipe.add_function_step(
     function_kwargs=dict(string_list='${stage_2.string_list}'),
     function_return=['string_list'],
     cache_executed_step=True,
+    repo='https://github.com/littlepae/pipeline_test.git',
 )
 
 pipe.add_function_step(
@@ -91,6 +94,7 @@ pipe.add_function_step(
     function_kwargs=dict(string_list='${stage_3.string_list}'),
     function_return=['string_list'],
     cache_executed_step=True,
+    repo='https://github.com/littlepae/pipeline_test.git',
 )
 
 # pipe.add_step(
