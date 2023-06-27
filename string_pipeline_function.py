@@ -25,6 +25,7 @@ def random_string(string_list):
     import string
     import time
     from local_module import test_print
+    from local_folder import function_in_folder
 
     string_list = string_list or ""
 
@@ -36,6 +37,7 @@ def random_string(string_list):
     string_list = string_list+random_char
 
     test_print()
+    function_in_folder()
 
     print('artifacts of this task:')
     print(string_list)
@@ -219,7 +221,7 @@ pipe.add_function_step(
 # pipe.start_locally()
 
 # Starting the pipeline (in the background)
-# pipe.start()
-pipe.start_locally(run_pipeline_steps_locally=True)
+pipe.start()
+# pipe.start_locally(run_pipeline_steps_locally=True)
 
 print("Pipeline done")
