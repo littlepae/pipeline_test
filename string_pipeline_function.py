@@ -27,7 +27,7 @@ def random_string(string_list):
     from local_module import test_print
     from local_folder import function_in_folder
 
-    string_list = string_list or ""
+    string_list = string_list
 
     random.seed(time.time())
 
